@@ -2,18 +2,14 @@
 <html>
 
 <head>
-  <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
+  <!-- Mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <link rel="shortcut icon" href="images/star-favicon.png" type="">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="images/star-favicon.png" type="favicon">
 
-  <title> MPol - 기업 </title>
+  <title> MPol - 마이페이지 </title>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -33,18 +29,93 @@
   <link href="css/responsive.css" rel="stylesheet" />
   <style>
     .profile-img {
-      width: 40px;
-      height: 40px;
+      width: 35px;
+      height: 35px;
       border-radius: 50%;
       object-fit: cover;
+    }
+
+    .profile_info {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      color: white;
+      justify-content: space-between;
+    }
+
+    .profile_left {
+      display: flex;
+      align-items: center;
+    }
+
+    .profile_info h2 {
+      margin-left: 20px;
+      margin-bottom: 0;
+      font-weight: bold;
+    }
+
+    .profile_social {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .profile_social a {
+      margin: 0 10px;
+      color: white;
+    }
+
+    .portfolio_grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    .portfolio_grid .col-md-4 {
+      flex: 1 0 30%;
+      margin: 10px;
+    }
+
+    .portfolio_grid img {
+      width: 100%;
+      height: 450px;
+      border-radius: 10px;
+    }
+
+    .portfolio_grid p {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .myPage_section {
+      background-color: #0F054C;
+      color: white;
+      padding: 40px 0;
+    }
+
+    .portfolio_item img:hover {
+      transform: scale(1.15);
+    }
+
+    .settings-btn, .logout-btn {
+      background-color: #fff;
+      color: #0F054C;
+      border: 2px solid #0F054C;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+
+    .settings-btn:hover, .logout-btn:hover {
+      background-color: #0F054C;
+      color: #fff;
     }
   </style>
 </head>
 
 <body class="sub_page">
-
   <div class="hero_area">
-
     <div class="hero_bg_box">
       <div class="bg_img_box">
         <img src="images/hero-bg.png" alt="">
@@ -61,7 +132,7 @@
             </span>
           </a>
 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class=""> </span>
           </button>
 
@@ -73,7 +144,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="worker.html"> 개인 </a>
               </li>
-              <li class="nav-item active">
+              <li class="nav-item">
                 <a class="nav-link" href="company.html">기업 <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
@@ -82,7 +153,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="recentP.html">최근 기록</a>
               </li>
-              <li class="nav-item" id="loginItem">
+              <li class="nav-item active" id="loginItem">
                 <a class="nav-link" href="login.html"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
               </li>
               <form class="form-inline">
@@ -96,71 +167,46 @@
       </div>
     </header>
     <!-- end header section -->
+    
   </div>
 
-  <!-- portfolio section -->
-  <section class="portfolio_section layout_padding">
+  <!-- myPage section -->
+  <section class="myPage_section layout_padding">
     <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          기업 <span>Portfolio</span> 를 만나보세요
-        </h2>
-        <p>
-          Check out some of our latest projects.
-        </p>
+      <div class="profile_info">
+        <div class="profile_left">
+          <img src="images/한서준 사진.jpeg" alt="Profile" class="profile-img">
+          <h2>watashijxxnsuka</h2>
+        </div>
+        <div class="profile_right">
+          <a href="settings.html" class="settings-btn"><i class="fa fas fa-cogs"></i></a>
+          <a href="#" class="logout-btn" id="logoutBtn"><i class="fa fa-sign-out"></i></a>
+        </div>
       </div>
-      <div class="row">
-        <div class="col-md-3 col-sm-6">
-          <div class="portfolio_item">
-            <div class="img-box">
-              <img src="images/portfolio1.jpg" alt="">
-            </div>
-            <div class="detail-box">
-              <h4>Project 1</h4>
-              <p>Short description of project 1.</p>
-            </div>
-          </div>
+      <div class="profile_social">
+        <a href="https://www.instagram.com/watashijxxnsuka/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://github.com/watashijxxnsuka"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <a href="https://www.youtube.com/@hoonyacoff"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+      </div>
+      <div class="portfolio_grid">
+        <div class="col-md-4 portfolio_item">
+          <img src="images/Dotori_(1).jpg" alt="Portfolio 1">
+          <p>24년 최신작</p>
         </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="portfolio_item">
-            <div class="img-box">
-              <img src="images/portfolio2.jpg" alt="">
-            </div>
-            <div class="detail-box">
-              <h4>Project 2</h4>
-              <p>Short description of project 2.</p>
-            </div>
-          </div>
+        <div class="col-md-4 portfolio_item">
+          <img src="images/45－1.jpg" alt="Portfolio 2">
+          <p>23년 한서준 포트폴리오</p>
         </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="portfolio_item">
-            <div class="img-box">
-              <img src="images/portfolio3.jpg" alt="">
-            </div>
-            <div class="detail-box">
-              <h4>Project 3</h4>
-              <p>Short description of project 3.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="portfolio_item">
-            <div class="img-box">
-              <img src="images/portfolio4.jpg" alt="">
-            </div>
-            <div class="detail-box">
-              <h4>Project 4</h4>
-              <p>Short description of project 4.</p>
-            </div>
-          </div>
+        <div class="col-md-4 portfolio_item">
+          <img src="images/IMG_9473.png" alt="Portfolio 3">
+          <p>22년 한서준</p>
         </div>
       </div>
     </div>
   </section>
-  <!-- end portfolio section -->
+  <!-- end myPage section -->
 
   <!-- info section -->
-
   <section class="info_section layout_padding2">
     <div class="container">
       <div class="row">
@@ -245,7 +291,6 @@
       </div>
     </div>
   </section>
-
   <!-- end info section -->
 
   <!-- footer section -->
@@ -257,9 +302,9 @@
       </p>
     </div>
   </section>
-  <!-- footer section -->
+  <!-- end footer section -->
 
-  <!-- jQery -->
+  <!-- jQuery -->
   <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
   <!-- popper js -->
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
@@ -285,9 +330,17 @@
           </a>
         `;
       }
+
+      const logoutBtn = document.getElementById('logoutBtn');
+      if (logoutBtn) {
+        logoutBtn.addEventListener('click', function() {
+          localStorage.removeItem('isLoggedIn');
+          localStorage.removeItem('userEmail');
+          window.location.href = 'index.html';
+        });
+      }
     });
   </script>
-
 </body>
 
 </html>

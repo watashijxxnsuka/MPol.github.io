@@ -2,18 +2,14 @@
 <html>
 
 <head>
-  <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
+  <!-- Mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <link rel="shortcut icon" href="images/star-favicon.png" type="">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="images/star-favicon.png" type="favicon">
 
-  <title> MPol - 기업 </title>
+  <title> MPol - 설정 </title>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -38,13 +34,69 @@
       border-radius: 50%;
       object-fit: cover;
     }
+
+    .profile_info {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      color: white;
+    }
+
+    .profile_info h2 {
+      margin-left: 20px;
+    }
+
+    .profile_social {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .profile_social a {
+      margin: 0 10px;
+      color: white;
+    }
+
+    .settings_section {
+      background-color: #0F054C;
+      color: white;
+      padding: 40px 0;
+    }
+
+    .settings_form {
+      margin-top: 50px;
+      background-color: #1F1668;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .settings_form label {
+      margin-top: 10px;
+    }
+
+    .settings_form input,
+    .settings_form button {
+      margin-top: 10px;
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .settings_form button {
+      background-color: #fff;
+      color: #0F054C;
+      border: 2px solid #0F054C;
+    }
+
+    .settings_form button:hover {
+      background-color: #0F054C;
+      color: #fff;
+    }
   </style>
 </head>
 
 <body class="sub_page">
-
   <div class="hero_area">
-
     <div class="hero_bg_box">
       <div class="bg_img_box">
         <img src="images/hero-bg.png" alt="">
@@ -61,7 +113,7 @@
             </span>
           </a>
 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class=""> </span>
           </button>
 
@@ -73,7 +125,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="worker.html"> 개인 </a>
               </li>
-              <li class="nav-item active">
+              <li class="nav-item">
                 <a class="nav-link" href="company.html">기업 <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
@@ -82,7 +134,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="recentP.html">최근 기록</a>
               </li>
-              <li class="nav-item" id="loginItem">
+              <li class="nav-item active" id="loginItem">
                 <a class="nav-link" href="login.html"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
               </li>
               <form class="form-inline">
@@ -96,71 +148,58 @@
       </div>
     </header>
     <!-- end header section -->
+    
   </div>
 
-  <!-- portfolio section -->
-  <section class="portfolio_section layout_padding">
+  <!-- settings section -->
+  <section class="settings_section layout_padding">
     <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          기업 <span>Portfolio</span> 를 만나보세요
-        </h2>
-        <p>
-          Check out some of our latest projects.
-        </p>
+      <div class="profile_info">
+        <img src="images/Dotori_(1).jpg" alt="Profile" class="profile-img">
+        <h2>watashijxxnsuka</h2>
       </div>
-      <div class="row">
-        <div class="col-md-3 col-sm-6">
-          <div class="portfolio_item">
-            <div class="img-box">
-              <img src="images/portfolio1.jpg" alt="">
-            </div>
-            <div class="detail-box">
-              <h4>Project 1</h4>
-              <p>Short description of project 1.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="portfolio_item">
-            <div class="img-box">
-              <img src="images/portfolio2.jpg" alt="">
-            </div>
-            <div class="detail-box">
-              <h4>Project 2</h4>
-              <p>Short description of project 2.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="portfolio_item">
-            <div class="img-box">
-              <img src="images/portfolio3.jpg" alt="">
-            </div>
-            <div class="detail-box">
-              <h4>Project 3</h4>
-              <p>Short description of project 3.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="portfolio_item">
-            <div class="img-box">
-              <img src="images/portfolio4.jpg" alt="">
-            </div>
-            <div class="detail-box">
-              <h4>Project 4</h4>
-              <p>Short description of project 4.</p>
-            </div>
-          </div>
-        </div>
+
+      <div class="settings_form">
+        <h3>프로필 정보 수정</h3>
+        <form>
+          <label for="profileName">이름</label>
+          <input type="text" id="profileName" name="profileName" value="watashijxxnsuka">
+          <label for="profileEmail">이메일</label>
+          <input type="email" id="profileEmail" name="profileEmail" value="jxxn2538@gmail.com">
+          <button type="submit">수정</button>
+        </form>
+      </div>
+
+      <div class="settings_form">
+        <h3>비밀번호 변경</h3>
+        <form>
+          <label for="currentPassword">현재 비밀번호</label>
+          <input type="password" id="currentPassword" name="currentPassword">
+          <label for="newPassword">새 비밀번호</label>
+          <input type="password" id="newPassword" name="newPassword">
+          <label for="confirmPassword">새 비밀번호 확인</label>
+          <input type="password" id="confirmPassword" name="confirmPassword">
+          <button type="submit">변경</button>
+        </form>
+      </div>
+
+      <div class="settings_form">
+        <h3>결제 정보 등록</h3>
+        <form>
+          <label for="cardNumber">카드 번호</label>
+          <input type="text" id="cardNumber" name="cardNumber">
+          <label for="cardExpiry">유효 기간</label>
+          <input type="text" id="cardExpiry" name="cardExpiry">
+          <label for="cardCVC">CVC</label>
+          <input type="text" id="cardCVC" name="cardCVC">
+          <button type="submit">등록</button>
+        </form>
       </div>
     </div>
   </section>
-  <!-- end portfolio section -->
+  <!-- end settings section -->
 
   <!-- info section -->
-
   <section class="info_section layout_padding2">
     <div class="container">
       <div class="row">
@@ -245,7 +284,6 @@
       </div>
     </div>
   </section>
-
   <!-- end info section -->
 
   <!-- footer section -->
@@ -257,9 +295,9 @@
       </p>
     </div>
   </section>
-  <!-- footer section -->
+  <!-- end footer section -->
 
-  <!-- jQery -->
+  <!-- jQuery -->
   <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
   <!-- popper js -->
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
@@ -277,7 +315,6 @@
       const userEmail = localStorage.getItem('userEmail');
       
       if (isLoggedIn) {
-        console.log('aaa');
         const loginItem = document.getElementById('loginItem');
         loginItem.innerHTML = `
           <a class="nav-link" href="mypage.html">
@@ -287,7 +324,7 @@
       }
     });
   </script>
-
 </body>
 
 </html>
+\
